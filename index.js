@@ -9,7 +9,6 @@ var corsOptions = {
     origin: process.env.ALLOWED_ORIGIN,
     allowedHeaders: 'Content-Type, Authorization',
     optionsSuccessStatus: 200,
-    methods: 'GET,POST,PUT,DELETE,PATCH,OPTIONS',
 }
 
 app.use(cors(corsOptions));
