@@ -7,7 +7,9 @@ const app = express();
 app.use(express.json())
 var corsOptions = {
     origin: process.env.ALLOWED_ORIGIN,
-    optionsSuccessStatus: 200
+    allowedHeaders: 'Content-Type, Authorization',
+    optionsSuccessStatus: 200,
+    methods: 'GET,POST,PUT,DELETE,PATCH,OPTIONS',
 }
 
 app.use(cors(corsOptions));
